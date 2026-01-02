@@ -1,9 +1,29 @@
-body {
-  font-family: "Inter", Arial, sans-serif;
-  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-  margin: 0;
+:root {
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #6366f1;
 }
 
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #818cf8;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--card);
+  margin: 0;
+}
 .container {
   max-width: 900px;
   margin: auto;
@@ -26,7 +46,7 @@ h1 {
 
 /* form */
 form {
-  background: white;
+  background: var(--card);
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -44,7 +64,7 @@ textarea {
 
 /* buttons*/
 button {
-  background: #6366f1;
+  background: var(--primary);
   color: white;
   border-radius: 8px;
   font-weight: 600;
@@ -61,7 +81,7 @@ button:hover {
 }
 
 .link-item {
-  background: white;
+  background: var(--card);
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05);
@@ -73,7 +93,7 @@ button:hover {
 }
 
 .link-item p {
-  color: #4b5563;
+  color: var(--muted);
 }
 
 .link-item small {
@@ -109,3 +129,4 @@ button:hover {
     font-size: 2rem;
   }
 }
+
