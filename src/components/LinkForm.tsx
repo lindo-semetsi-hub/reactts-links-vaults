@@ -32,7 +32,7 @@ export default function LinkForm({ onSave, editingLink }: Props) {
         };
         onSave(newLink);
         setTitle("");
-        setTitle("");
+        setUrl("");
         setDecsription("");
         setTags("");
     };
